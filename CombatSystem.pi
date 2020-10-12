@@ -1,0 +1,101 @@
+
+import random
+import time
+import replit
+replit.clear()
+playerhealth = 12
+enemyhealth = 12
+playerdamage = random.randint(3,6)
+enemydamage = random.randint(3,6)
+
+answer = input("fight 1:yes 2:no")
+if answer == "2":
+  print("ok...")
+if answer == "1":
+  print("your opponent is a rock class...")
+  element = input("choose your class... 1:rock 2:paper 3:Scizzors")
+
+  if element == "1":
+    playerdamage = random.randint(3,6)
+  if element == "2":
+    playerdamage = random.randint(4,8)
+  if element == "3":
+    playerdamage = random.randint(2,4)
+
+if element == "1":
+  x1 = True
+  while True:
+    time.sleep(2)
+    print("you attack your opponent!!!")
+    playerdamage = random.randint(3,6)
+    time.sleep(2)
+    enemyhealth -= playerdamage
+    print("your opponent is now at" ,enemyhealth)
+    if enemyhealth < 0:
+      print("YOU WIN!!!")
+      break
+    time.sleep(2)
+    print("Your opponent attacks")
+    enemydamage = random.randint(3,6)
+    playerhealth -= enemydamage
+    block = random.randint(1,100)
+    if block > 50:
+      playerhealth += enemydamage
+      print("you blocked his attack!!!")
+
+    time.sleep(2)
+    print("you are now at" ,playerhealth)
+    if playerhealth < 0:
+      print("YOU LOSE...")
+      break
+if element == "2":
+  x2 = True
+  while True:
+    time.sleep(2)
+    print("you attack your opponent!!!")
+    playerdamage = random.randint(4,8)
+    time.sleep(2)
+    enemyhealth -= playerdamage
+    print("your opponent is now at" ,enemyhealth)
+    if enemyhealth < 0:
+      print("YOU WIN!!!")
+      break
+    time.sleep(2)
+    print("Your opponent attacks")
+    enemydamage = random.randint(3,6)
+    playerhealth -= enemydamage
+    block = random.randint(1,100)
+    if block > 50:
+      playerhealth += enemydamage
+      print("you blocked his attack!!!")
+    time.sleep(2)
+    print("you are now at" ,playerhealth)
+    if playerhealth < 0:
+      print("YOU LOSE...")
+      break
+if element == "3":
+  x3 = True
+  while True:
+    time.sleep(2)
+    print("you attack your opponent!!!")
+    playerdamage = random.randint(2,4)
+    time.sleep(2)
+    enemyhealth -= playerdamage
+    print("your opponent is now at" ,enemyhealth)
+    if enemyhealth < 0:
+      print("YOU WIN!!!")
+      break
+    time.sleep(2)
+    print("Your opponent attacks")
+    enemydamage = random.randint(3,6)
+    playerhealth -= enemydamage
+    block = random.randint(1,100)
+    if block > 50:
+      playerhealth += enemydamage
+      print("you blocked his attack!!!")
+    time.sleep(2)
+    print("you are now at" ,playerhealth)
+    if playerhealth < 0:
+      print("YOU LOSE...")
+      break
+    
